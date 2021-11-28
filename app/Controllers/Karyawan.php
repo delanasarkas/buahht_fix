@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 use App\Models\KaryawanModel;
+use App\Models\IpModel;
 use App\Libraries\Zklibrary;
 
 class Karyawan extends BaseController
@@ -27,8 +28,10 @@ class Karyawan extends BaseController
     public function tarik(){
         // INISIAL MODEL USERS
         $modelKaryawan = new KaryawanModel();
-
-        $zk = new ZKLibrary('192.168.88.203', 4370);
+        $modelIp = new IpModel();
+        
+        $ip = $modelIp->first();
+        $zk = new ZKLibrary($ip['address'], 4370);
         $zk->connect();
         $zk->disableDevice();
 

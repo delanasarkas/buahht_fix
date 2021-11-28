@@ -14,7 +14,7 @@
             <tr>
                 <th>No</th>
                 <th>Nama</th>
-                <th>State</th>
+                <th>Status</th>
                 <th>Tanggal</th>
                 <th>Waktu</th>
             </tr>
@@ -24,7 +24,7 @@
             <tr>
                 <td><?= $no++; ?></td>
                 <td><?= $presensi['nama']; ?></td>
-                <td><?= $presensi['state']; ?></td>
+                <td><?= $presensi['state'] == 1 ? 'Valid' : 'Tidak Valid' ?></td>
                 <td><?= $presensi['date']; ?></td>
                 <td><?= $presensi['date']; ?></td>
             </tr>

@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 use App\Models\PresensiModel;
+use App\Models\IpModel;
 use App\Libraries\Zklibrary;
 
 class Presensi extends BaseController
@@ -28,8 +29,10 @@ class Presensi extends BaseController
     public function tarik(){
         // INISIAL MODEL PRESENSI
         $modelPresensi = new PresensiModel();
-
-        $zk = new ZKLibrary('192.168.88.203', 4370);
+        $modelIp = new IpModel();
+        
+        $ip = $modelIp->first();
+        $zk = new ZKLibrary($ip['address'], 4370);
         $zk->connect();
         $zk->disableDevice();
 

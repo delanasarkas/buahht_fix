@@ -25,8 +25,8 @@
                 <td><?= $no++; ?></td>
                 <td><?= $user['id_finger']; ?></td>
                 <td><?= $user['nama']; ?></td>
-                <td><?= $user['level']; ?></td>
-                <td><?= $user['password']; ?></td>
+                <td><?= $user['level'] == 0 ? 'User' : '-' ?></td>
+                <td><?= $user['password'] == '' ? '-' : $user['password'] ?></td>
             </tr>
             <?php endforeach; ?>
         </tbody>

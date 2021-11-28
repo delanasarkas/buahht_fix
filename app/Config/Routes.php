@@ -50,9 +50,14 @@ $routes->add('/tarik-presensi', 'Presensi::tarik');
 
 // PRESENSI
 $routes->get('/laporan', 'Laporan::index');
+$routes->get('/laporan/export-excel', 'Laporan::exportExcel');
 $routes->get('/laporan-tanggal', 'Laporan::filterTanggal');
 $routes->get('/laporan-bulan', 'Laporan::filterBulan');
 $routes->get('/laporan-nama', 'Laporan::filterNama');
+
+// SETTINGS IP
+$routes->get('/settings/ip', 'Ip::index');
+$routes->add('/settings/ip-ubah/(:segment)','Ip::ubah/$1');
 
 /*
  * --------------------------------------------------------------------

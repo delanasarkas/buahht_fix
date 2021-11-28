@@ -1,4 +1,4 @@
 <header>
-  <h2>MY HEADER</h2>
+  <h2>RSIA BUAH HATI PAMULANG</h2>
   <a href="/logout">Logout</a>
 </header>
