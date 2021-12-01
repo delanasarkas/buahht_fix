@@ -19,7 +19,7 @@ class Ip extends BaseController
                 'data' => $datas
             ];
 
-            return view('pages/settings/ipaddress/index', $data);
+            return view('pages/dashboard/settings/ipaddress/index', $data);
         }
     }
 
@@ -47,7 +47,7 @@ class Ip extends BaseController
                 'validation' => $this->validator
             ];
 
-            return view('pages/settings/ipaddress/index', $data);
+            return view('pages/dashboard/settings/ipaddress/index', $data);
         } else {
             $modelIp->update($id,[
                 'address' => $ipaddress,
